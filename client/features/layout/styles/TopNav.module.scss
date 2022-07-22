@@ -1,0 +1,26 @@
+@import '_Common';
+
+.navbar {
+  background-color: $color-dark;
+  margin-bottom: 1rem;
+}
+
+.navbarHeader {
+  padding: 2.1rem 2.5rem;
+}
+
+.container {
+  padding: 1.3rem 2.5rem;
+}
+
+.toggler {
+  background-color: inherit;
+  border: unset !important;
+  box-shadow: unset;
+  align-self: center;
+  cursor: pointer;
+}
+
+.navItem {
+  @include generalNavItem;
+}

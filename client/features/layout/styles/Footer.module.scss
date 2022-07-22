@@ -1,0 +1,48 @@
+@import '_Common';
+
+@mixin footerText {
+  font-size: small;
+  padding: 0rem 0.4rem;
+}
+
+.footer {
+  display: flex;
+  background-color: $color-dark;
+}
+
+.container {
+  flex: 1;
+}
+
+.linkContainer {
+  border-bottom: 1px solid $color-dark-gray;
+}
+
+.arrowContainer {
+  min-width: 8%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background-color: $color-light;
+  transition: opacity 0.5s;
+}
+
+.copyrightText {
+  @include generalNavItem;
+  @include footerText;
+  color: $color-gray;
+  flex: 1;
+  padding: 0.5rem 1rem;
+}
+
+.footerItem {
+  @include generalNavItem;
+  @include footerText;
+  color: $color-gray;
+}
+
+.navItem {
+  @include generalNavItem;
+  @include footerText;
+}
