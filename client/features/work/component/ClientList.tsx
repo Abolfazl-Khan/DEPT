@@ -16,9 +16,8 @@ const ClientList: NextPage = () => {
       </p>
       <Row className="mx-md-5">
         {data.map((client) => (
-          <Col xs="6" md="4" className="text-center mt-3 p-0">
+          <Col key={client.logo} xs="6" md="4" className="text-center mt-3 p-0">
             <img
-              key={client.logo}
               src={`${process.env.NEXT_PUBLIC_BASE_URL}/${client.logo}`}
               alt={client.title}
               className={styles.logo}

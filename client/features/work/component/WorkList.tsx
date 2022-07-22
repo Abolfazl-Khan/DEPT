@@ -12,8 +12,8 @@ const WorkList: NextPage = () => {
       {data
         .filter((item) => !!item.image)
         .map((workItem) => (
-          <Col md='6' className='p-0'>
-            <ImageCard key={workItem.image} cardItem={workItem} />
+          <Col key={workItem.image} md="6" className="p-0">
+            <ImageCard cardItem={workItem} />
           </Col>
         ))}
     </Row>
