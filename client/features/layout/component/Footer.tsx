@@ -5,7 +5,8 @@ import useFooter from '../hook/useFooter';
 import NavList from './NavList';
 
 const Footer: NextPage = () => {
-  const { isFooterHovered, toggleIsFooterHovered, currentYear } = useFooter();
+  const { isFooterHovered, toggleIsFooterHovered, currentYear, scrollToTop } =
+    useFooter();
 
   return (
     <footer
@@ -51,7 +52,7 @@ const Footer: NextPage = () => {
         className={`d-none d-md-flex opacity-${
           isFooterHovered ? '100' : '0'
         }  ${styles.arrowContainer}`}
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={scrollToTop}
       >
         <span>
           <img src="/Arrow.svg" height={20} />

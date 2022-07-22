@@ -5,8 +5,9 @@ const useFooter = () => {
   const [isFooterHovered, setIsFooterHovered] = useState(false);
 
   const toggleIsFooterHovered = () => setIsFooterHovered((prev) => !prev);
+  const scrollToTop = () => window.scrollTo(0, 0);
 
-  return { isFooterHovered, toggleIsFooterHovered, currentYear };
+  return { isFooterHovered, toggleIsFooterHovered, currentYear, scrollToTop };
 };
 
 export default useFooter;
