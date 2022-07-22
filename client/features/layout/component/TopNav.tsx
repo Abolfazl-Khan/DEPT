@@ -11,16 +11,16 @@ const TopNav: NextPage = () => {
   return (
     <Navbar expand={false} className={styles.navbar}>
       <Container fluid className={styles.container}>
-        <Navbar.Brand href='#'>
-          <img src='/DEPT-LOGO-White.svg' height={20} />
+        <Navbar.Brand href="#">
+          <img src="/icons/DEPT-LOGO-White.svg" height={20} />
         </Navbar.Brand>
-        <div className='d-flex'>
-          <div className='d-none d-lg-flex'>
+        <div className="d-flex">
+          <div className="d-none d-lg-flex">
             <NavList className={styles.navItem} isBriefList />
           </div>
 
           <div className={styles.toggler} onClick={toggleIsMenuOpen}>
-            <img src='/Vector.svg' />
+            <img src="/icons/Vector.svg" />
           </div>
           <Menu isOpen={isMenuOpen} toggle={toggleIsMenuOpen} />
         </div>

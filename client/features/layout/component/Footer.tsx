@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import Image from 'react-bootstrap/Image';
 import styles from '../styles/Footer.module.scss';
 import useFooter from '../hook/useFooter';
 import NavList from './NavList';
@@ -19,17 +18,17 @@ const Footer: NextPage = () => {
           className={`d-flex justify-content-between py-5 mx-4 ${styles.linkContainer}`}
         >
           <div className={`d-block d-md-flex align-items-end `}>
-            <Image
-              src="/DEPT-LOGO-White.svg"
+            <img
+              src="/icons/DEPT-LOGO-White.svg"
               className="d-none d-md-block pe-5"
               height={25}
             />
             <NavList className={`${styles.navItem} pb-4 pb-md-0`} isBriefList />
           </div>
           <div className="d-flex flex-column d-md-none ">
-            <Image src="/Facebook.svg" className="mb-3" height={20} />
-            <Image src="/Twitter.svg" className="mb-3" height={20} />
-            <Image src="/Instagram.svg" className="mb-3" height={20} />
+            <img src="/icons/Facebook.svg" className="mb-3" height={20} />
+            <img src="/icons/Twitter.svg" className="mb-3" height={20} />
+            <img src="/icons/Instagram.svg" className="mb-3" height={20} />
           </div>
         </div>
         <div className="d-block d-md-flex py-5 px-4">
@@ -55,7 +54,7 @@ const Footer: NextPage = () => {
         onClick={scrollToTop}
       >
         <span>
-          <img src="/Arrow.svg" height={20} />
+          <img src="/icons/Arrow.svg" height={20} />
           <br />
           Top
         </span>

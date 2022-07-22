@@ -5,7 +5,8 @@ import styles from '../styles/Menu.module.scss';
 import NavList from './NavList';
 import { MenuProps } from '../interfaces';
 
-const Menu: NextPage<MenuProps> = ({ isOpen, toggle }) => {
+const Menu: NextPage<MenuProps> = (props) => {
+  const { isOpen, toggle } = props;
   return (
     <Modal
       show={isOpen}
@@ -15,7 +16,7 @@ const Menu: NextPage<MenuProps> = ({ isOpen, toggle }) => {
     >
       <Modal.Header closeButton closeVariant="white" className="border-0">
         <Modal.Title>
-          <img src="/DEPT-LOGO-White.svg" height={20} />
+          <img src="/icons/DEPT-LOGO-White.svg" height={20} />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

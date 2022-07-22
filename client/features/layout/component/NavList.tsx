@@ -17,7 +17,11 @@ const NavList: NextPage<NavListProps> = (props) => {
             }  ${className}`}
           >
             {isArrowVisible(item.title) ? (
-              <img src="/Select-Arrow.svg" height={25} className={`mx-2 `} />
+              <img
+                src="/icons/Select-Arrow.svg"
+                height={25}
+                className={`mx-2 `}
+              />
             ) : null}
             {item.title}
           </a>
