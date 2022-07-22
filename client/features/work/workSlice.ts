@@ -1,10 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-
-interface Client {
-  id: string;
-  title: string;
-  logo: string;
-}
+import { Client, Work } from './interfaces';
 
 export const workSlice = createApi({
   reducerPath: 'work',
@@ -21,8 +16,13 @@ export const workSlice = createApi({
           return `/clients`;
         },
       }),
+      fetchPortfolio: builder.query<Work[], string | void>({
+        query(categoryId = '', industryId = '') {
+          return `/portfolios?categoryId=${categoryId}&industryId=${industryId}`;
+        },
+      }),
     };
   },
 });
 
-export const { useFetchClientsQuery } = workSlice;
+export const { useFetchClientsQuery, useFetchPortfolioQuery } = workSlice;

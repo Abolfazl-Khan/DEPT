@@ -1,0 +1,20 @@
+.container {
+  background-color: #121212;
+  padding: 4rem 0rem;
+}
+
+.text {
+  color: #fff;
+  margin: 0rem 7vw 1.5rem;
+}
+
+.titleText {
+  @extend .text;
+  font-size: xx-large;
+}
+
+.logo {
+  height: 10vh;
+  max-height: 90px;
+  min-height: 60px;
+}
