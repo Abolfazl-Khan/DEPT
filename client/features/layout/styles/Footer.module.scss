@@ -28,18 +28,21 @@
   transition: opacity 0.5s;
 }
 
-.copyrightText {
+.footerItem {
   @include generalNavItem;
+  @include footerText;
+  background-image: linear-gradient(to right,
+      $color-light,
+      $color-light 50%,
+      $color-gray 50%);
+}
+
+
+.copyrightText {
   @include footerText;
   color: $color-gray;
   flex: 1;
   padding: 0.5rem 1rem;
-}
-
-.footerItem {
-  @include generalNavItem;
-  @include footerText;
-  color: $color-gray;
 }
 
 .navItem {

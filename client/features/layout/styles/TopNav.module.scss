@@ -5,12 +5,8 @@
   height: 12vh;
 }
 
-.navbarHeader {
-  padding: 2.1rem 2.5rem;
-}
-
 .container {
-  padding: 0rem 2.5rem;
+  padding: 0 4vw;
 }
 
 .toggler {
@@ -19,6 +15,7 @@
   box-shadow: unset;
   align-self: center;
   cursor: pointer;
+  padding-left: 5vw;
 }
 
 .navItem {

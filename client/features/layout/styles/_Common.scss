@@ -9,10 +9,41 @@ $color-dark: #121212;
   color: $color-light;
   font-size: large;
   line-height: initial;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem .6rem;
   display: block;
+  background-image: linear-gradient(to right,
+      $color-light-gray,
+      $color-light-gray 50%,
+      $color-light 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &::before {
+    content: '';
+    background: $color-light-gray;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+
+  }
+
   &:hover {
-    color: $color-light;
-    text-decoration: underline;
+    background-position: 0;
+
+    // color: $color-light;
+    // text-decoration: underline;
+  }
+
+  &:hover::before {
+    width: 100%;
   }
 }
