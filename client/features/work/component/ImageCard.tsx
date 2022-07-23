@@ -14,7 +14,7 @@ const ImageCard: NextPage<{ cardItem: Work }> = (props) => {
         }/${cardItem.image})`,
         height: isHeaderCard ? '88vh' : '100vh',
       }}
-      className={styles.container}
+      className={`${styles.container} ${!isHeaderCard && styles.animative}`}
     >
       <p className={styles.text}>{cardItem.companyName}</p>
       <p className={styles.titleText}>{cardItem.title}</p>

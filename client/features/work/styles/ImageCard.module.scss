@@ -6,11 +6,23 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+.animative {
+  padding-bottom: 0;
+  transition: padding .5s;
+
+  &:hover {
+    padding-bottom: 30px;
+  }
 }
 
 .text {
   color: #fff;
   margin: 0rem 7vw 1.5rem;
+  text-shadow: 0px 1px gray;
+
 }
 
 .titleText {
