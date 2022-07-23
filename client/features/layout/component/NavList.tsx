@@ -9,24 +9,24 @@ const NavList: NextPage<NavListProps> = (props) => {
   const { isArrowVisible } = useNavList(props);
   return (
     <>
-      {navItems.map((item, index) => (
-        <Link key={item.title + index} href={item.link}>
-          <a
-            className={`${
-              isBriefList && index == 0 ? 'd-none' : ''
-            }  ${className}`}
-          >
-            {isArrowVisible(item.title) ? (
-              <img
-                src="/icons/Select-Arrow.svg"
-                height={25}
-                className={`mx-2 `}
-              />
-            ) : null}
-            {item.title}
-          </a>
-        </Link>
-      ))}
+      {navItems
+        .filter((item) =>
+          isBriefList ? item.isInBriefList : item.isInNestedList
+        )
+        .map((item, index) => (
+          <Link key={item.title + index} href={item.link}>
+            <a className={className}>
+              {isArrowVisible(item.title) ? (
+                <img
+                  src='/icons/Select-Arrow.svg'
+                  height={25}
+                  className={`mx-2 `}
+                />
+              ) : null}
+              {item.title}
+            </a>
+          </Link>
+        ))}
     </>
   );
 };
