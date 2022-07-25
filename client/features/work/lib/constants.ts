@@ -7,3 +7,12 @@ export const headerCard = {
   categoryId: '',
   industryId: '',
 };
+
+export const allIndustries = {
+  id: '',
+  title: 'all industries',
+};
+export const allCategories = {
+  id: '',
+  title: 'all categories',
+};

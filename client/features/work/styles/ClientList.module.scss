@@ -1,10 +1,12 @@
+@import '_Common';
+
 .container {
-  background-color: #121212;
+  background-color: $color-dark;
   padding: 4rem 0rem;
 }
 
 .text {
-  color: #fff;
+  color: $color-light;
   margin: 0rem 7vw 1.5rem;
 }
 

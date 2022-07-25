@@ -1,15 +1,15 @@
 import { NextPage } from 'next';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { useFetchPortfolioQuery } from '../workSlice';
 import ImageCard from './ImageCard';
+import useWorkList from '../hook/useWorkList';
 
 const WorkList: NextPage = () => {
-  const { data = [] } = useFetchPortfolioQuery();
+  const { workData } = useWorkList();
 
   return (
     <Row>
-      {data
+      {workData
         .filter((item) => !!item.image)
         .map((workItem) => (
           <Col key={workItem.image} md="6" className="p-0">

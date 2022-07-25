@@ -1,0 +1,16 @@
+@import '_Common';
+
+.container {
+  padding: 1.5rem;
+}
+
+.text {
+  @include searchText;
+
+  margin: 0;
+
+  :global span {
+    @include selectedSearchText;
+    cursor: pointer;
+  }
+}

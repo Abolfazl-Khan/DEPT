@@ -1,0 +1,15 @@
+@import '_Common';
+
+.container {
+  padding: 1.5rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.text {
+  @include searchText;
+}
+
+.isSelected {
+  @include selectedSearchText;
+}
