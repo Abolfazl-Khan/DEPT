@@ -3,7 +3,6 @@ import Head from 'next/head';
 import styles from './styles/AppLayout.module.scss';
 import TopNav from './component/TopNav';
 import Footer from './component/Footer';
-import ScrollTop from './component/ScrollTop';
 
 interface AppLayoutProps {
   children: React.ReactNode;
@@ -19,10 +18,6 @@ const AppLayout: NextPage<AppLayoutProps> = ({ pageTitle, children }) => {
         <link
           rel="icon"
           href="https://www.deptagency.com/wp-content/themes/dept/public/favicon.svg"
-        />
-        <link
-          href="http://fonts.cdnfonts.com/css/maison-neue"
-          rel="stylesheet"
         />
       </Head>
 
