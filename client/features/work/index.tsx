@@ -8,7 +8,7 @@ import { headerCard } from './lib/constants';
 const Work: NextPage = () => {
   return (
     <div className="w-100">
-      <ImageCard cardItem={headerCard} />
+      <ImageCard cardItem={headerCard} priority />
       <SearchBox />
       <WorkList />
       <ClientList />
