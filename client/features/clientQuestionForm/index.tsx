@@ -21,9 +21,12 @@ const ClientQuestionForm: NextPage = () => {
           <Row>
             <Col md='4' className='my-4'>
               <Form.Group>
-                <Form.Label className='mb-0'>NAME</Form.Label>
+                <Form.Label className='mb-0' htmlFor='name'>
+                  NAME
+                </Form.Label>
                 <Form.Control
                   {...register('name', { required: 'This field is required' })}
+                  id='name'
                   className={styles.formInput}
                   type='text'
                 />
@@ -39,9 +42,12 @@ const ClientQuestionForm: NextPage = () => {
 
             <Col md='4' className='my-4'>
               <Form.Group>
-                <Form.Label className='mb-0'>EMAIL</Form.Label>
+                <Form.Label className='mb-0' htmlFor='email'>
+                  EMAIL
+                </Form.Label>
                 <Form.Control
                   {...register('email', { required: 'This field is required' })}
+                  id='email'
                   className={styles.formInput}
                   type='text'
                 />
@@ -58,9 +64,12 @@ const ClientQuestionForm: NextPage = () => {
 
           <Col md='4' className='my-4'>
             <Form.Group>
-              <Form.Label className='mb-0'>MESSAGE</Form.Label>
+              <Form.Label className='mb-0' htmlFor='message'>
+                MESSAGE
+              </Form.Label>
               <Form.Control
                 {...register('message', { required: 'This field is required' })}
+                id='message'
                 className={styles.formInput}
                 as='textarea'
               />
