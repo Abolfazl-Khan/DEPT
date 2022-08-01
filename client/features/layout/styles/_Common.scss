@@ -9,15 +9,16 @@ $color-dark: #121212;
   color: $color-light;
   font-size: large;
   line-height: initial;
-  padding: 0.3rem .6rem;
+  padding: 0.3rem 0.6rem;
   display: block;
-  background-image: linear-gradient(to right,
-      $color-light-gray,
-      $color-light-gray 50%,
-      $color-light 50%);
+  background-image: linear-gradient(
+    to right,
+    $color-light-gray,
+    $color-light-gray 50%,
+    $color-light 50%
+  );
   background-size: 200% 100%;
   background-position: -100%;
-  display: inline-block;
   position: relative;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -33,7 +34,6 @@ $color-dark: #121212;
     width: 0;
     height: 3px;
     transition: all 0.3s ease-in-out;
-
   }
 
   &:hover {
