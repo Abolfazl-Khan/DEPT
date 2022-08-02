@@ -1,0 +1,22 @@
+@import '_Common';
+
+.container {
+  @include cardContainer;
+  background-color: $color-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  @include cardText;
+}
+
+.textBlock {
+  margin: 1vh 25px;
+}
+
+.divider {
+  margin: 4vh 0;
+  border-top: 1px solid $color-light-gray;
+}

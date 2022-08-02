@@ -13,6 +13,17 @@ export interface Work {
   industryId: string;
 }
 
+export enum CardTypes {
+  IMAGE_CARD = 'image_card',
+  TEXT_CARD = 'text_card',
+}
+
+export interface Card {
+  col: number;
+  type: CardTypes;
+  data: Work[];
+}
+
 export interface FetchPortfoliosProps {
   categoryId: string | string[] | undefined;
   industryId: string | string[] | undefined;

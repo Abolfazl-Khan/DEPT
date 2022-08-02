@@ -3,22 +3,30 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Alert from 'react-bootstrap/Alert';
 import ImageCard from './ImageCard';
+import TextCard from './TextCard';
 import useWorkList from '../hook/useWorkList';
+import { CardTypes } from '../interfaces';
 
 const WorkList: NextPage = () => {
-  const { workData } = useWorkList();
+  const { cardData } = useWorkList();
 
   return (
     <Row>
-      {workData
-        .filter((item) => !!item.image)
-        .map((workItem) => (
-          <Col key={workItem.image} md="6" className="p-0">
-            <ImageCard cardItem={workItem} />
-          </Col>
-        ))}
-      {!workData.length && (
-        <Alert variant="dark" className="w-75 mx-auto my-3 text-center">
+      {cardData.map((cardItem, cardIndex) => (
+        <Col
+          key={`work_card_item_${cardIndex}`}
+          md={cardItem.col}
+          className='p-0'
+        >
+          {cardItem.type === CardTypes.IMAGE_CARD ? (
+            <ImageCard cardItem={cardItem.data[0]} />
+          ) : (
+            <TextCard cardItems={cardItem.data} />
+          )}
+        </Col>
+      ))}
+      {!cardData.length && (
+        <Alert variant='dark' className='w-75 mx-auto my-3 text-center'>
           No Result!
         </Alert>
       )}

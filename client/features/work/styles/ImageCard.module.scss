@@ -1,9 +1,8 @@
 @import '_Common';
 
 .container {
+  @include cardContainer;
   position: relative;
-  width: 100%;
-  height: 100vh;
 }
 
 .headerCard {
@@ -20,14 +19,15 @@
 }
 
 .text {
-  color: $color-light;
+  @include cardText;
   margin: 0rem 7vw 1.5rem;
+
 }
 
 .titleText {
   @extend .text;
   font-size: xx-large;
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .textBlock {
