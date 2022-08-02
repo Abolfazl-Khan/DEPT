@@ -17,6 +17,8 @@ This project is a frontend assignment. It's a great practice to build a responsi
 - Redux (Redux Toolkit)
 - React Hook Form
 - TypeScript
+- Jest
+- Testing Library
 - Node.js
 - Express.js
 
